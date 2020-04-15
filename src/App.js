@@ -12,6 +12,8 @@ class App extends Component {
       <div className="App">
         <h1>Hi. This is Ehsan from react.js :D</h1>
         <Tree />
+        <Tree />
+        <Tree />
       </div>
       // React.createElement('div' , {className:'App'} , 
       //   React.createElement('h1' , null , 'Hi. This is Ehsan from react.js :DDDD'))
