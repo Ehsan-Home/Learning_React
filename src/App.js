@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Tree from "./Tree/Tree"
 
-let phase = 0;
-
 
 class App extends Component {
 
@@ -22,11 +20,32 @@ class App extends Component {
     },
   }
   
+  switchStateHandler = () => {
+    console.log("in handler")
+    this.setState(
+      {
+        Tree2 : {
+          name: "CHHHH",
+          height : "900cm",
+        },
+        Tree3 : {
+          name:'Ehsan',
+          height : "1000",
+        },
+        Tree4 : {
+          name:'asghar',
+          height : "200",
+        },
+      }
+      )
+  }
+
+
   render() {
     return (
       <div className="App">
         <h1>Hi. This is Ehsan from react.js :D</h1>
-        <button>Submit</button>
+        <button onClick={this.switchStateHandler}>Submit</button>
         <Tree name={this.state.Tree1.name} Height={this.state.Tree1.height}/>
         <Tree name={this.state.Tree2.name} Height={this.state.Tree2.height}/>
         <Tree name={this.state.Tree3.name} Height={this.state.Tree3.height}>Fruite:not clear</Tree>
