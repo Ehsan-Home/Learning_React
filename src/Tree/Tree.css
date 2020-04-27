@@ -1,0 +1,9 @@
+.Tree{
+    border : 1px solid rgb(110, 110, 110);
+    width : 60%;
+    margin : 10px auto;
+    padding : 10px;
+    box-shadow: 0 2px 3px rgb(49, 44, 44);
+    text-align: center;
+
+}
