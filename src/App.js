@@ -32,12 +32,23 @@ class App extends Component {
           name:'Ehsan',
           height : "1000",
         },
-        Tree4 : {
-          name:'asghar',
-          height : "200",
-        },
       }
       )
+  }
+
+  changeStateHandler = (event) => {
+    this.setState(
+      {
+        Tree2: {
+          name: event.target.value,
+          height : "900 cm",
+        },
+        // Tree3 : {
+        //   name:'Ehsan',
+        //   height : "1000",
+        // },
+      }
+    )
   }
 
 
@@ -52,7 +63,8 @@ class App extends Component {
           click={this.switchStateHandler.bind(this , "Soghra")}/>
         <Tree 
           name={this.state.Tree2.name} 
-          Height={this.state.Tree2.height}/>
+          Height={this.state.Tree2.height}
+          change={this.changeStateHandler}/>
         <Tree 
           name={this.state.Tree3.name} 
           Height={this.state.Tree3.height}>Fruite:not clear</Tree>
