@@ -51,12 +51,20 @@ class App extends Component {
     )
   }
 
+  style = {
+    font : "inherit",
+    boderRadius : "25px",
+    backgroundColor : "red",
+    cursor : "pointer"
+  }
 
   render() {
     return (
       <div className="App">
         <h1>Hi. This is Ehsan from react.js :D</h1>
-        <button onClick={this.switchStateHandler.bind(this , "Amir")}>Submit</button>
+        <button 
+          onClick={this.switchStateHandler.bind(this , "Amir")}
+          style={this.style}>Submit</button>
         <Tree 
           name={this.state.Tree1.name} 
           Height={this.state.Tree1.height}
