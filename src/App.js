@@ -20,21 +20,7 @@ class App extends Component {
     },
   }
   
-  switchStateHandler = (Tree2name) => {
-    console.log("in handler")
-    this.setState(
-      {
-        Tree2 : {
-          name: Tree2name,
-          height : "900cm",
-        },
-        Tree3 : {
-          name:'Ehsan',
-          height : "1000",
-        },
-      }
-      )
-  }
+  
 
   changeStateHandler = (event) => {
     this.setState(
@@ -63,12 +49,12 @@ class App extends Component {
       <div className="App">
         <h1>Hi. This is Ehsan from react.js :D</h1>
         <button 
-          onClick={this.switchStateHandler.bind(this , "Amir")}
-          style={this.style}>Submit</button>
+          style={this.style}
+          >Submit</button>
         <Tree 
           name={this.state.Tree1.name} 
           Height={this.state.Tree1.height}
-          click={this.switchStateHandler.bind(this , "Soghra")}/>
+          />
         <Tree 
           name={this.state.Tree2.name} 
           Height={this.state.Tree2.height}
